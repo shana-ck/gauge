@@ -4,11 +4,9 @@ let curAngle = getComputedStyle(root).getPropertyValue('--angle');
 let angleVal = parseInt(curAngle.slice(0, -3));
 const modal = document.getElementById('modal');
 const modalClose = document.getElementById('close-modal');
+const kornackiText = document.getElementById('kornacki-text');
+const reset = document.getElementById('reset');
 let count = 0;
-
-function showModal() {
-  modal.classList.add('show-modal');
-}
 
 function closeModal() {
   modal.classList.remove('show-modal');
@@ -33,15 +31,19 @@ function poll() {
   root.style.setProperty('--angle', angleVal + 'deg');
   setPrediction(angleVal);
   count++;
-  if (count > 10) {
+  if (count > 9) {
     kornacki();
     count = 0;
   }
 }
 
 modalClose.addEventListener('click', closeModal);
+reset.addEventListener('click', closeModal);
 window.addEventListener('click', e => {
   e.target === modal ? closeModal() : false;
 });
 
-function kornacki() {}
+function kornacki() {
+  modal.classList.add('show-modal');
+  kornackiText.textContent = `${prediction.textContent}`;
+}
