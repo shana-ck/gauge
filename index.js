@@ -13,7 +13,7 @@ function setPrediction(angleVal) {
   } else if (angleVal > 90 && angleVal < 135) {
     prediction.textContent = 'Lean Harris';
   } else if (angleVal >= 135) {
-    prediction.textContent == 'Strong Harris';
+    prediction.textContent = 'Strong Harris';
   }
 }
 
