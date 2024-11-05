@@ -133,6 +133,66 @@
   text-align: center;
   font-family: sans-serif;
 }
+
+.modal-container {
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+}
+
+.show-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: whitesmoke;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  max-width: 95%;
+  width: 300px;
+  animation: modalopen 0.6s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-content {
+  text-align: center;
+  padding: 5px;
+  font-family: sans-serif;
+}
+
+.close-modal {
+  float: right;
+  cursor: pointer;
+  top: 0;
+  font-family: sans-serif;
+}
+.reset-container {
+  padding: 5px;
+  align-items: center;
+}
+#reset {
+  cursor: pointer;
+  border-radius: 5px;
+  background-image: linear-gradient(45deg, red, white, blue);
+  margin: 10px;
+  padding: 5px;
+}
+
+#reset:hover {
+  transform: scale(1.1);
+}
+
+#kornacki-text {
+  text-transform: uppercase;
+}
+
 .button-container {
   margin-top: 50px;
   text-align: center;
