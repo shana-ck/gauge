@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --angle: 0deg;
+}
+
+.tech-guild {
+  font-size: x-large;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 5%;
+}
+.gauge-container {
+  width: 300px;
+  height: 300px;
+  border: 3px solid black;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, red, white, blue);
+  margin: 50px auto;
+  position: relative;
+}
+
+.center-point {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 137px;
+  left: 137px;
+  z-index: 11;
+}
+
+.needle-container {
+  width: 160px;
+  height: 160px;
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+  left: 67px;
+  top: 67px;
+}
+
+.needle-wrapper {
+  height: 160px;
+  width: 160px;
+  background-color: transparent;
+  position: relative;
+  transform: rotate(var(--angle));
+  transition: .4s;
+}
+
+.gauge-needle {
+  width: 142.5px;
+  height: 6px;
+  background-color: transparent;
+  border: solid 4px black;
+  border-color: black transparent transparent transparent;
+  border-radius: 8px 4px 6px 80px;
+  position: absolute;
+  left: -63px;
+  top: 80px;
+  z-index: 9;
+}
+
+.gauge-scale-0 {
+  width: 8px;
+  height: 280px;
+  background-color: black;
+  position: absolute;
+  left: 143px;
+  top: 7px;
+  transform: rotate(-90deg);
+}
+
+.gauge-scale-25 {
+  width: 8px;
+  height: 280px;
+  background-color: black;
+  position: absolute;
+  left: 143px;
+  top: 7px;
+  transform: rotate(-45deg);
+}
+
+.gauge-scale-50 {
+  width: 8px;
+  height: 280px;
+  background-color: black;
+  position: absolute;
+  left: 143px;
+  top: 7px;
+  transform: rotate(0deg);
+}
+
+.gauge-scale-75 {
+  width: 8px;
+  height: 280px;
+  background-color: black;
+  position: absolute;
+  left: 143px;
+  top: 7px;
+  transform: rotate(45deg);
+}
+
+.gauge-center-hide {
+  width: 250px;
+  height: 250px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 9;
+}
+
+.gauge-bottom-hide {
+  width: 320px;
+  height: 150px;
+  background-color: white;
+  position: absolute;
+  top: 158px;
+  left: -14px;
+  z-index: 11;
+  border-top: 1px solid black;
+}
+
+.prediction {
+  margin-top: 10px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.button-container {
+  margin-top: 50px;
+  text-align: center;
+  height: 100px;
+}
+
+button {
+  position: relative;
+  height: 50px;
+  width: 280px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1.1em;
+  overflow: hidden;
+  box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+  z-index: -2;
+}
+
+.button-poll {
+  position: absolute;
+  background-image: linear-gradient(45deg, red, white, blue);
+  background-size: 150% 150%;
+  height: 70px;
+  width: 420px;
+  border-radius: 5px;
+  margin: -40px 0 0 -140px;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.button-container:hover .button-poll {
+  -webkit-animation: gradient 3s ease 0.1s infinite;
+  animation: gradient 3s ease 0.1s infinite;
+  /* /* -moz-animation: gradient 3s ease 0.1s infinite; */
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+footer {
+  font-size: small;
+  font-family: sans-serif;
+  text-align: center;
+}
